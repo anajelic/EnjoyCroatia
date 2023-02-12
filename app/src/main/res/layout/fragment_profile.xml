@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.enjoycroatia.viewmodels.UserViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".ui.fragments.ProfileFragment">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLoggedTitle"
+            style="@style/AppStandardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/you_are_logged_in_with"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLogged"
+            style="@style/AppStandardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{viewModel.userLiveData.email}"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@id/tvLoggedTitle"
+            app:layout_constraintStart_toStartOf="@+id/tvLoggedTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvLoggedTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNicknameTitle"
+            style="@style/AppStandardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/your_nickname_is"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLogged" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNickname"
+            style="@style/AppStandardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="@{viewModel.userLiveData.nickName}"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tvNicknameTitle"
+            app:layout_constraintStart_toEndOf="@id/tvNicknameTitle"
+            app:layout_constraintTop_toTopOf="@id/tvNicknameTitle"
+            tools:text="Tester" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNumberOfFavoritesStart"
+            style="@style/AppStandardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/you_have"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNicknameTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNumberOfFavorites"
+            style="@style/AppStandardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@{String.valueOf(viewModel.userLiveData.favoriteDestinations.size())}"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tvNumberOfFavoritesStart"
+            app:layout_constraintStart_toEndOf="@id/tvNumberOfFavoritesStart"
+            app:layout_constraintTop_toTopOf="@id/tvNumberOfFavoritesStart"
+            tools:text="2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNumberOfFavoritesEnd"
+            style="@style/AppStandardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/favorite_destinations"
+            app:layout_constraintBottom_toBottomOf="@id/tvNumberOfFavorites"
+            app:layout_constraintStart_toEndOf="@id/tvNumberOfFavorites"
+            app:layout_constraintTop_toTopOf="@id/tvNumberOfFavorites" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogout"
+            style="@style/CharcoalButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/logout"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

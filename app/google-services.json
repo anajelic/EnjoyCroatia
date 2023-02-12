@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "534601099207",
+    "project_id": "enjoycroatia-ec6e4",
+    "storage_bucket": "enjoycroatia-ec6e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534601099207:android:71217be5eee6ba0c7c1be2",
+        "android_client_info": {
+          "package_name": "com.example.enjoycroatia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "534601099207-f5jcdt63i2mktn5g3gb2r2geactmqr7u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4LGvYAhqioTAVGUO0aDdAT8O4GdtxuuE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "534601099207-f5jcdt63i2mktn5g3gb2r2geactmqr7u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
